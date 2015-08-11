@@ -3,27 +3,48 @@ var ezdep = require('./lib/ezdep.js'),
 
 
 function getUrlDep(url) {
-
   return {
     data: url,
     type: 'string',
     customs: {
+      // What to return on a custom succes or fail?
+      // I guess it could be an object with the property passed: true|false
       protocol: function (data) {
         if (data.indexOf('http') !== 0 && data.indexOf('https') !== 0) {
-          console.log('No protocol found in url: ' + data);
+          return {
+            passed: false,
+            msg: 'No protocol found in url: ' + data
+          }
         }
       }
     }
   }
-
 }
 
-require('./tests/fixtures/getSource.js')(
+function getUrlEzdep(url) {
+  return new Ezdep({
+    data: url,
+    type: 'string',
+    customs: {
+      // What to return on a custom succes or fail?
+      // I guess it could be an object with the property passed: true|false
+      protocol: function (data) {
+        if (data.indexOf('http') !== 0 && data.indexOf('https') !== 0) {
+          return {
+            passed: false,
+            msg: 'No protocol found in url: ' + data
+          }
+        }
+      }
+    }
+  });
+}
 
+
+require('./tests/fixtures/getSource.js')(
   new Ezdep({
     url: getUrlDep('hsttps://github.com/opensoars/ezdep')
   })
-
 );
 
 
