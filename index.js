@@ -1,4 +1,4 @@
-var ezdep = require('./src/ezdep.js'),
+var ezdep = require('./lib/ezdep.js'),
     Ezdep = ezdep.Constructor;
 
 
