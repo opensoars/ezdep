@@ -38,4 +38,4 @@ Node.js function dependencies (arguments) made easy.
 
 ## License
 
-[License](https://github.com/opensoars/ezdep/blob/master/LICENSE)
+[License (MIT)](https://github.com/opensoars/ezdep/blob/master/LICENSE)
