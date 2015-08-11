@@ -28,7 +28,7 @@ Node.js function dependencies (arguments) made easy.
 
 ## Coverage
 
-`npm run local_test` and open ./coverage/lcov-report/index.html in your browser.
+`npm run local_test` and open `./coverage/lcov-report/index.html` in your browser.
 
 
 ## Documentation
@@ -38,4 +38,4 @@ Node.js function dependencies (arguments) made easy.
 
 ## License
 
-[License (MIT)](https://github.com/opensoars/ezdep/blob/master/LICENSE)
+[License ](https://github.com/opensoars/ezdep/blob/master/LICENSE)
