@@ -8,21 +8,31 @@ function getUrlDep(url) {
     data: url,
     type: 'string',
     customs: {
-      protocol: function () {
-
-
-
+      protocol: function (data) {
+        if (data.indexOf('http') !== 0 && data.indexOf('https') !== 0) {
+          console.log('No protocol found in url: ' + data);
+        }
       }
     }
   }
 
 }
 
+require('./tests/fixtures/getSource.js')(
+
+  new Ezdep({
+    url: getUrlDep('hsttps://github.com/opensoars/ezdep')
+  })
+
+);
+
+
 
 /**
  * Any property which hasn't got a data property won't be seen
  * as data to use in checkDeps
  */
+/*
 var getSource_deps = new Ezdep({
   url: {
     data: 'a',
@@ -40,8 +50,9 @@ var getSource_deps = new Ezdep({
 
   use_throw: false
 });
+*/
 
-
+/*
 require('./tests/fixtures/getSource.js')(
   getSource_deps
-);
+);*/
