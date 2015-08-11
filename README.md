@@ -23,14 +23,17 @@ Node.js function dependencies (arguments) made easy.
 
 ## Tests
 
+`npm run local_test`
 
 
 ## Coverage
 
+`npm run local_test` and open ./coverage/lcov-report/index.html in your browser.
 
 
 ## Documentation
 
+`npm run doc`
 
 
 ## License
