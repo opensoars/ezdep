@@ -25,7 +25,7 @@ function getUrlEzdep(url) {
   return new Ezdep({
     url: {
       data: url,
-      type: 'string',
+      type: ['string', 'object'],
       customs: {
         protocol: function (url, done) {
           if (url.indexOf('http://') !== 0 && url.indexOf('https://') !== 0) {
