@@ -6,9 +6,16 @@ module.exports = function getSource(conf) {
   // function body code lines.
   //
 
+  console.log(conf.getData());
+
   conf.checkDeps({
     use_throw: true
   });
+
+  /** Actual getSource module */
+  return function () {
+
+  };
 
   //console.log(conf);
 };

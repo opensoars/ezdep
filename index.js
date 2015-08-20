@@ -1,7 +1,7 @@
 var ezdep = require('./lib/ezdep.js'),
     Ezdep = ezdep.Constructor;
 
-
+/*
 function getUrlDep(url) {
   return {
     data: url,
@@ -20,7 +20,7 @@ function getUrlDep(url) {
     }
   }
 }
-
+*/
 function getUrlEzdep(url) {
   return new Ezdep({
     url: {
@@ -46,7 +46,11 @@ require('./tests/fixtures/getSource.js')(
 */
 var url = 'htttps://github.com';
 
-require('./tests/fixtures/getSource.js')(getUrlEzdep(url));
+
+var urlEzDep = getUrlEzdep(url);
+
+require('./tests/fixtures/getSource.js')(urlEzDep);
+
 
 
 /**
