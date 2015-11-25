@@ -38,7 +38,7 @@ function getUrlEzdep(url) {
 }
 
 /*
-require('./tests/fixtures/getSource.js')(
+require('./test/fixtures/getSource.js')(
   new Ezdep({
     url: getUrlDep('hsttps://github.com/opensoars/ezdep')
   })
@@ -49,7 +49,7 @@ var url = 'htttps://github.com';
 
 var urlEzDep = getUrlEzdep(url);
 
-require('./tests/fixtures/getSource.js')(urlEzDep);
+require('./test/fixtures/getSource.js')(urlEzDep);
 
 
 
@@ -78,6 +78,6 @@ var getSource_deps = new Ezdep({
 */
 
 /*
-require('./tests/fixtures/getSource.js')(
+require('./test/fixtures/getSource.js')(
   getSource_deps
 );*/
